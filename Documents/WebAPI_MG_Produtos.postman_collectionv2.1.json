@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "0176e910-d703-4102-b4e1-997cbd7b1be8",
+		"name": "WebAPI_MG_Produtos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET 1 produto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/V1/Produtos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"V1",
+						"Produtos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get todos produtos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cpd\": 999999,\r\n  \"produto\": \"teste\",\r\n  \"referencia\": \"referencia\",\r\n  \"descricao\": \"descricao\",\r\n  \"class\": \"B1\",\r\n  \"familia\": 10,\r\n  \"preco\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/V1/Produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"V1",
+						"Produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get todos produtos paginados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/V1/PagedProdutos?pageNumber=2&pageSize=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"V1",
+						"PagedProdutos"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "2"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post inserir produto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpd\": 999999,\r\n    \"produto\": \"sdfsdfsd\",\r\n    \"referencia\": \"TS/CC\",\r\n    \"descricao\": \"INT. TRIPOLAR 20A\",\r\n    \"class\": \"A1\",\r\n    \"familia\": 1,\r\n    \"preco\": 38.48\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/V1/Produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"V1",
+						"Produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put atualizar produto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpd\": 999999,\r\n    \"produto\": \"teste\",\r\n    \"referencia\": \"TS/CC\",\r\n    \"descricao\": \"INT. TRIPOLAR 20A\",\r\n    \"class\": \"A1\",\r\n    \"familia\": 1,\r\n    \"preco\": 38.48\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/V1/Produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"V1",
+						"Produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete produto",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpd\": 999999,\r\n    \"produto\": \"teste\",\r\n    \"referencia\": \"TS/CC\",\r\n    \"descricao\": \"INT. TRIPOLAR 20A\",\r\n    \"class\": \"A1\",\r\n    \"familia\": 1,\r\n    \"preco\": 38.48\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/V1/Produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"V1",
+						"Produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post autenticacao",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\": 0,\n\t\"Username\": \"antonio\",\n\t\"Password\": \"antonio\",\n\t\"Role\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/V1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"V1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get authenticated",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkFOVE9OSU8iLCJyb2xlIjoiR2VyZW50ZSIsIm5iZiI6MTU3NTU2NjEyMSwiZXhwIjoxNTc1NTczMzIxLCJpYXQiOjE1NzU1NjYxMjF9.Do-c1P86viP1abgL13o3ftNtkP1ep-ZrWZDPslD2N3I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/authenticated",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"authenticated"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
